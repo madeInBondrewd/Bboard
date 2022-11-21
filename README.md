@@ -1,4 +1,2 @@
 # Bboard
-# Bboard
-#Bbvoard
-#cococooc
+ //掲示板を作ってみるよ～
