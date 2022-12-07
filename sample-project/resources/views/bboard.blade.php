@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>企業・ビジネスサイト向け 無料ホームページテンプレート tp_biz58</title>
+<title>Bboard-メイドインボンボルド</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -22,9 +22,9 @@
 <!--/#menubar_hdr-->
 
 <div id="header-icon">
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="https://twitter.com/Kindai_csg"><i class="fab fa-twitter"></i></a>
+<a href="https://www.instagram.com/kindai_csg/"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/@user-zy8pd6hg4y"><i class="fab fa-youtube"></i></a>
 <a href="#"><i class="fab fa-facebook-f"></i></a>
 </div>
 <!--/#header-icon-->
@@ -39,6 +39,18 @@
 <img src="{{ asset('css/images/2.jpg') }}" alt="" class="slide2">
 <img src="{{ asset('css/images/3.jpg') }}" alt="" class="slide3">
 </aside>
+
+<section>
+
+<h2>Bboard(仮)とは</h2>
+
+<p>
+    これはアビスの攻略を目指した人間だったものの物語。</br>
+    
+</p>
+
+</section>
+
 
 <section>
 
@@ -83,9 +95,9 @@
 <nav>
 <ul>
 <li class="current"><a href="index.html">HOME</a></li>
-<li><a href="company.html">COMPANY</a></li>
-<li><a href="works.html">WORKS</a></li>
-<li><a href="contact.html">CONTACT</a></li>
+<li><a href="company.html">ROOM</a></li>
+<li><a href="works.html">PRIVATE</a></li>
+<li><a href="contact.html">OTHER</a></li>
 </ul>
 </nav>
 
