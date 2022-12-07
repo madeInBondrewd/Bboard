@@ -37,7 +37,7 @@
 }
 
 .slide1,.slide2,.slide3 {
-	width: 100%;height: auto;
+	width: 100%;height: 400px;
 	animation-duration: 12s;	/*実行する時間。「s」は秒の事。*/
 	animation-iteration-count:infinite;		/*実行する回数。「infinite」は無限に繰り返す意味。*/
 	position: absolute;left:0px;top:0px;
