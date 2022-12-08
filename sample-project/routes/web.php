@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/bboard', 'HomeController@bboard')->name('bboard');
 
+Route::get('/room', 'HomeController@room')->name('room');
+
+Route::get('/private', 'HomeController@private')->name('private');
+

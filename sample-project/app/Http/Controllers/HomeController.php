@@ -30,4 +30,14 @@ class HomeController extends Controller
     {
         return view('bboard');
     }
+
+    public function room()
+    {
+        return view('room');
+    }
+
+    public function private()
+    {
+        return view('private');
+    }
 }

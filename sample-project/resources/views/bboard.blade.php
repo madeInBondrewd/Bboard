@@ -51,14 +51,23 @@
 
 </section>
 
+<h3>使い方</h3>
+
+<p>
+    わけわかんないね</br>
+    
+</p>
+
+</section>
+
 
 <section>
 
 <h2>News</h2>
 
 <dl id="new">
-<dt>2022/08/25<span>その他</span></dt>
-<dd>tp_biz58配布開始。</dd>
+<dt>2022/011/21<span>その他</span></dt>
+<dd>プロジェクト始動!!</dd>
 <dt>20XX/00/00<span class="icon-bg1">サービス</span></dt>
 <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
 <dt>20XX/00/00<span class="icon-bg1">サービス</span></dt>
@@ -94,12 +103,15 @@
 <!--メインメニュー-->
 <nav>
 <ul>
-<li class="current"><a href="index.html">HOME</a></li>
-<li><a href="company.html">ROOM</a></li>
-<li><a href="works.html">PRIVATE</a></li>
-<li><a href="contact.html">OTHER</a></li>
+<li class="current"><a href="/bboard">HOME</a></li>
+<li><a href="/room">ROOM</a></li>
+<li><a href="/private">PRIVATE</a></li>
+<li><a href="/other">OTHER</a></li>
 </ul>
 </nav>
+<p><img src="{{ asset('css/images/oya.png') }}" alt=""><br>
+おやおやおやおや</br>
+</p>
 
 </div>
 <!--/#menubar-->
