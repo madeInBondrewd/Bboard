@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Memo;
 
 class HomeController extends Controller
 {
@@ -33,7 +34,8 @@ class HomeController extends Controller
 
     public function room()
     {
-        return view('room');
+        $user = \Auth::user();
+        return view('room',compact('user'));
     }
 
     public function private()
@@ -43,6 +45,22 @@ class HomeController extends Controller
 
     public function text()
     {
-        return view('text');
+        $user = \Auth::user();
+        $memos = Memo::where('status',1)->get();
+        //dd($memos);
+        return view('text',compact('user','memos'));
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+        //dd($data);
+        $memo_id = Memo::insertGetId([
+            'content' => $data['content'],
+             'user_id' => $data['user_id'], 
+             //'tag_id' => $tag_id,
+             'status' => 1
+        ]);
+        return redirect()->route('room');
     }
 }

@@ -27,3 +27,5 @@ Route::get('/private', 'HomeController@private')->name('private');
 
 Route::get('/text', 'HomeController@text')->name('text');
 
+Route::post('/store', 'HomeController@store')->name('store');
+

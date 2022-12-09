@@ -92,15 +92,6 @@
 </div>
 <!--/.list-container-->
 
-<h3>上のボックスを使う場合は</h3>
-<p>ボックス全体を、<br>
-<span class="look">&lt;div class=&quot;list-container&quot;&gt;</span><br>
-<span class="look">&lt;div&gt;</span><br>
-で囲んで下さい。このスタイルがないとレイアウトが崩れます。</p>
-
-<h3>画面幅1200px以上で４列に、それ以下で２列レイアウトになります</h3>
-<p>編集したい場合は、cssフォルダのstyle.css内の.listをチェックして下さい。</p>
-
 </section>
 
 </main>

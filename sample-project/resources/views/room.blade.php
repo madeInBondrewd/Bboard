@@ -48,9 +48,14 @@
 
 </table>
 
-<form action="text.blade.php" method="POST">
-<textarea class="text1" name=”text” rows="3" placeholder="ここのルームは匿名です！"></textarea>
+<form action="/store" method="POST">
+    @csrf
+    <input type='hidden' name='user_id' value="{{ $user['id'] }}">
+    <div class="form-group">
+    <textarea class="content" name="content" cols=100% rows="3" placeholder="匿名でメッセージを送信"></textarea>
 <input type="submit">
+    </div>
+
 </form>
 
 
