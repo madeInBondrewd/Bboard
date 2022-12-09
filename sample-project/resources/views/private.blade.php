@@ -42,7 +42,7 @@
 <div class="list-container">
 
 <div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
+<figure><img src="{{ asset('css/images/sample1.jpg') }}" alt=""></figure>
 <h4>おや</h4>
 <p>おやおやおや</p>
 </div>

@@ -25,3 +25,5 @@ Route::get('/room', 'HomeController@room')->name('room');
 
 Route::get('/private', 'HomeController@private')->name('private');
 
+Route::get('/text', 'HomeController@text')->name('text');
+

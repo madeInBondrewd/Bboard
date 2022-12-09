@@ -40,4 +40,9 @@ class HomeController extends Controller
     {
         return view('private');
     }
+
+    public function text()
+    {
+        return view('text');
+    }
 }
