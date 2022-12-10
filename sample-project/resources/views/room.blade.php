@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body>
+<!-- autoScroll() 呼び出し-->
+<body onload = autoScroll()>
 
 <div id="container">
 
@@ -39,6 +40,7 @@
 
 <table class="ta1">
 
+
 <script type="text/javascript">
 //フォームで自動にスクロールする
 function autoScroll(){
@@ -49,10 +51,12 @@ var element = document.getElementById('list');
 //y座標を99999に下げる
 element.contentWindow.scrollTo(0, 99999);
 }
+</script>
 
 <tr>
-<td>
-<iframe width="600" height="400" src="http://127.0.0.1:8000/text" ></iframe>
+<th></th>
+<td >
+<iframe id = list width="600" height="400" src="http://127.0.0.1:8000/text"></iframe>
 </td>
 </tr>
 
@@ -62,8 +66,9 @@ element.contentWindow.scrollTo(0, 99999);
     @csrf
     <input type='hidden' name='user_id' value="{{ $user['id'] }}">
     <div class="form-group">
-    <textarea class="content" name="content" cols=60% rows="3" placeholder="匿名でメッセージを送信"></textarea>
+    <textarea class="content" name="content" cols=100% rows="3" placeholder="匿名でメッセージを送信"></textarea>
 <input type="submit">
+
     </div>
 
 </form>
@@ -106,7 +111,7 @@ element.contentWindow.scrollTo(0, 99999);
 <script src="js/main.js"></script>
 
 <!--ページの上部へ戻るボタン-->
-<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+ <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
 </body>
 </html>
