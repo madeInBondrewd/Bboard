@@ -624,3 +624,16 @@ main {
 /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
 
 }
+
+.mytext{
+	text-align: right;
+	color: red;
+}
+
+.main{
+	padding:0px 20% 0% 10%;
+}
+
+.form-group{
+
+}

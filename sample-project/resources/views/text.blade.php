@@ -10,7 +10,11 @@
 <body>
   <div class="main">
     @foreach($memos AS $memo)
+    @if($memo['user_id']===$user['id'])
+    <p class=mytext>{{ $memo['content'] }}</p>
+    @else
     <p>{{ $memo['content'] }}</p>
+    @endif
     @endforeach
   </div>
 </body>

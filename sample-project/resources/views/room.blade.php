@@ -40,7 +40,6 @@
 <table class="ta1">
 
 <tr>
-<th></th>
 <td>
 <iframe width="600" height="400" src="http://127.0.0.1:8000/text" ></iframe>
 </td>
@@ -52,7 +51,7 @@
     @csrf
     <input type='hidden' name='user_id' value="{{ $user['id'] }}">
     <div class="form-group">
-    <textarea class="content" name="content" cols=100% rows="3" placeholder="匿名でメッセージを送信"></textarea>
+    <textarea class="content" name="content" cols=60% rows="3" placeholder="匿名でメッセージを送信"></textarea>
 <input type="submit">
     </div>
 
