@@ -29,3 +29,5 @@ Route::get('/text', 'HomeController@text')->name('text');
 
 Route::post('/store', 'HomeController@store')->name('store');
 
+Route::post('/upload', 'HomeController@upload')->name('upload');
+

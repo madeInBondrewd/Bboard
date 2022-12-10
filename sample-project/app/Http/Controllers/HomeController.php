@@ -46,7 +46,7 @@ class HomeController extends Controller
     public function text()
     {
         $user = \Auth::user();
-        $memos = Memo::where('status',1)->get();
+        $memos = Memo::get();
         //dd($memos);
         return view('text',compact('user','memos'));
     }
@@ -62,5 +62,32 @@ class HomeController extends Controller
              'status' => 1
         ]);
         return redirect()->route('room');
+    }
+
+    
+    //画像のアップロード
+    
+    public function upload(Request $request)
+    {
+        $data = $request->all();
+        //dd($data);
+        // ディレクトリ名
+        $dir = 'sample';
+
+        // アップロードされたファイル名を取得
+        $file_name = $request->file('image')->getClientOriginalName();
+
+        // 取得したファイル名で保存
+        $request->file('image')->storeAs('public/' . $dir, $file_name);
+
+        // ファイル情報をDBに保存
+        $memo_id = Memo::insertGetId([
+            'content' => 'storage/' . $dir . '/' . $file_name,
+             'user_id' => $data['user_id'], 
+             //'tag_id' => $tag_id,
+             'status' => 3
+        ]);
+
+        return redirect('/room');
     }
 }

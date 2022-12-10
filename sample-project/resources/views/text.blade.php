@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-  <div class="main">
+  <div class="main-t">
     @foreach($memos AS $memo)
-    @if($memo['user_id']===$user['id'])
-    <p class=mytext>{{ $memo['content'] }}</p>
-    @else
+    @if($memo['user_id']===$user['id']&&$memo['status']===1)
+    <p class="mytext">{{ $memo['content'] }}</p>
+    @elseif($memo['user_id']===$user['id']&&$memo['status']===3)
+    <img class="myimg" src="{{ asset($memo['content']) }}">
+    @elseif($memo['status']===1)
     <p>{{ $memo['content'] }}</p>
+    @elseif($memo['status']===3)
+    <img src="{{ asset($memo['content']) }}">
     @endif
     @endforeach
   </div>

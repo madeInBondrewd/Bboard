@@ -630,10 +630,16 @@ main {
 	color: red;
 }
 
-.main{
+.main-t{
 	padding:0px 20% 0% 10%;
 }
 
-.form-group{
+.myimg{
+	margin: 20px 0 0 40%;
+	width: 60%;
+	height: auto;
+}
 
+.content{
+	width: 100%;
 }

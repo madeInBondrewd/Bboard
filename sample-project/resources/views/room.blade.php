@@ -63,13 +63,20 @@ element.contentWindow.scrollTo(0, 99999);
 
 <form action="/store" method="POST">
     @csrf
-    <input type='hidden' name='user_id' value="{{ $user['id'] }}">
+    <input type='hidden'  name='user_id' value="{{ $user['id'] }}">
     <div class="form-group">
-    <textarea class="content" name="content" cols=100% rows="3" placeholder="匿名でメッセージを送信"></textarea>
+    <textarea class="content" name="content" rows="3" placeholder="匿名でメッセージを送信"></textarea>
 <input type="submit">
 
     </div>
 
+</form>
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+  @csrf
+  <input type='hidden'  name='user_id' value="{{ $user['id'] }}">
+  <input type="file" name="image">
+  <button>アップロード</button>
 </form>
 
 
