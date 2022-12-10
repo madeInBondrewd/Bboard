@@ -39,6 +39,17 @@
 
 <table class="ta1">
 
+<script type="text/javascript">
+//フォームで自動にスクロールする
+function autoScroll(){
+
+//iframeを取得
+var element = document.getElementById('list');
+
+//y座標を99999に下げる
+element.contentWindow.scrollTo(0, 99999);
+}
+
 <tr>
 <td>
 <iframe width="600" height="400" src="http://127.0.0.1:8000/text" ></iframe>
