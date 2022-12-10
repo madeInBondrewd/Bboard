@@ -54,7 +54,6 @@ element.contentWindow.scrollTo(0, 99999);
 </script>
 
 <tr>
-<th></th>
 <td >
 <iframe id = list width="600" height="400" src="http://127.0.0.1:8000/text"></iframe>
 </td>
