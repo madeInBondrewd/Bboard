@@ -67,6 +67,7 @@ class HomeController extends Controller
         $memo_id = Memo::insertGetId([
             'content' => $data['content'],
              'user_id' => $data['user_id'], 
+             'name' => $data['name'], //user_idと紐付けできるので省略したい
              //'tag_id' => $tag_id,
              'status' => 1
         ]);

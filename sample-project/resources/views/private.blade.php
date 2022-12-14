@@ -5,6 +5,7 @@
 <title>room-Bboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="privateです">
+<meta http-equiv="refresh" content="30">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 

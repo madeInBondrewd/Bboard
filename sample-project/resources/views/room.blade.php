@@ -5,6 +5,7 @@
 <title>room-Bboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="roomです">
+<meta http-equiv="refresh" content="30">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
@@ -64,6 +65,7 @@ element.contentWindow.scrollTo(0, 99999);
 <form action="/store" method="POST">
     @csrf
     <input type='hidden'  name='user_id' value="{{ $user['id'] }}">
+    <input type='hidden'  name='name' value="{{ $user['name'] }}">
     <div class="form-group">
     <textarea class="content" name="content" rows="3" placeholder="匿名でメッセージを送信"></textarea>
 <input type="submit">
