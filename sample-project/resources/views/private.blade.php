@@ -2,13 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>private-Bboard</title>
+<title>room-Bboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ここにサイト説明を入れます">
+<meta name="description" content="privateです">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body>
+<!-- autoScroll() 呼び出し-->
+<body onload = autoScroll()>
 
 <div id="container">
 
@@ -35,62 +36,50 @@
 
 <section>
 
-<h2>Private一覧</h2>
+<h2>private</h2>
 
-<p>検索機能も欲しいよね</p>
+<table class="ta1">
 
-<div class="list-container">
 
-<div class="list">
-<figure><img src="{{ asset('css/images/sample1.jpg') }}" alt=""></figure>
-<h4>おや</h4>
-<p>おやおやおや</p>
-</div>
+<script type="text/javascript">
+//フォームで自動にスクロールする
+function autoScroll(){
 
-<div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<h4>ナナチ</h4>
-<p>ナナチは今日もかわいいですね</p>
-</div>
+//iframeを取得
+var element = document.getElementById('list');
 
-<div class="list">
-<figure><a href="#"><img src="images/sample1.jpg" alt=""></a></figure>
-<h4><a href="#">Sample Title</a></h4>
-<p>ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
-</div>
+//y座標を99999に下げる
+element.contentWindow.scrollTo(0, 99999);
+}
+</script>
 
-<div class="list">
-<figure><a href="#"><img src="images/sample1.jpg" alt=""></a></figure>
-<h4><a href="#">Sample Title</a></h4>
-<p>ここに説明を入れます。サンプルテキスト。</p>
-</div>
+<tr>
+<td >
+<iframe id = list width="600" height="400" src="http://127.0.0.1:8000/privateText"></iframe>
+</td>
+</tr>
 
-<div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<h4>Sample Title</h4>
-<p>ここに説明を入れます。サンプルテキスト。</p>
-</div>
+</table>
 
-<div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<h4>Sample Title</h4>
-<p>ここに説明を入れます。サンプルテキスト。</p>
-</div>
+<form action="/privateStore" method="POST">
+    @csrf
+    <input type='hidden'  name='user_id' value="{{ $user['id'] }}">
+    <input type='hidden'  name='name' value="{{ $user['name'] }}">
+    <div class="form-group">
+    <textarea class="content" name="content" rows="3" placeholder="{{ $user['name'] }} としてメッセージを送信"></textarea>
+<input type="submit">
 
-<div class="list">
-<figure><a href="#"><img src="images/sample1.jpg" alt=""></a></figure>
-<h4><a href="#">Sample Title</a></h4>
-<p>ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
-</div>
+    </div>
 
-<div class="list">
-<figure><a href="#"><img src="images/sample1.jpg" alt=""></a></figure>
-<h4><a href="#">Sample Title</a></h4>
-<p>ここに説明を入れます。サンプルテキスト。</p>
-</div>
+</form>
 
-</div>
-<!--/.list-container-->
+<form method="POST" action="/upload" enctype="multipart/form-data">
+  @csrf
+  <input type='hidden'  name='user_id' value="{{ $user['id'] }}">
+  <input type="file" name="image">
+  <button>アップロード</button>
+</form>
+
 
 </section>
 
@@ -129,7 +118,7 @@
 <script src="js/main.js"></script>
 
 <!--ページの上部へ戻るボタン-->
-<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+ <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
 </body>
 </html>

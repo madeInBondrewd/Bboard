@@ -40,7 +40,8 @@ class HomeController extends Controller
 
     public function private()
     {
-        return view('private');
+        $user = \Auth::user();
+        return view('private',compact('user'));
     }
 
     public function text()
@@ -49,6 +50,14 @@ class HomeController extends Controller
         $memos = Memo::get();
         //dd($memos);
         return view('text',compact('user','memos'));
+    }
+
+    public function privateText()
+    {
+        $user = \Auth::user();
+        $memos = Memo::get();
+        //dd($memos);
+        return view('privateText',compact('user','memos'));
     }
 
     public function store(Request $request)
@@ -62,6 +71,20 @@ class HomeController extends Controller
              'status' => 1
         ]);
         return redirect()->route('room');
+    }
+
+    public function privateStore(Request $request)
+    {
+        $data = $request->all();
+        //dd($data);
+        $memo_id = Memo::insertGetId([
+            'content' => $data['content'],
+             'user_id' => $data['user_id'], 
+             'name' => $data['name'], //user_idと紐付けできるので省略したい
+             //'tag_id' => $tag_id,
+             'status' => 2
+        ]);
+        return redirect()->route('private');
     }
 
     

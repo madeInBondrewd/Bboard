@@ -630,17 +630,22 @@ main {
 	color: red;
 }
 
+
 .main-t{
 	padding:0px 20% 0% 10%;
 }
 
+.main-p{
+	padding:0px 15% 0% 5%;
+}
+
 .myimg{
 	margin: 20px 0 0 40%;
-	width: 60%;
+	width: 30%;
 	height: auto;
 }
 
 .content{
-	width: 100%;
+	width: 70%;
 	font-size: 15px;
 }
