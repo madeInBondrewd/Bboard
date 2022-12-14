@@ -15,7 +15,7 @@
     @elseif($memo['user_id']===$user['id']&&$memo['status']===4)
     <img class="myimg" src="{{ asset($memo['content']) }}">
     @elseif($memo['status']===2)
-    <p>\{{ $memo['name'] }}　{{ $memo['content'] }}</p>
+    <p>{{ $memo['name'] }}\　{{ $memo['content'] }}</p>
     @elseif($memo['status']===4)
     <img src="{{ asset($memo['content']) }}">
     @endif
